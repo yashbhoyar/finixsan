@@ -1,0 +1,108 @@
+body{
+  background-color:#fafafa ;
+  
+}
+  
+  
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+nav{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height:8vh;
+  background-color:#212529;
+  font-family: 'Titillium Web', sans-serif;
+  border-bottom-color: #0000;
+  border-bottom-width: 5px;
+   
+
+}
+.logo {
+  color:#ECF0F1 ;
+  letter-spacing:1px;
+  font-weight: bold;
+  font-size:20px;
+}
+
+.nav-links{
+  display:flex;
+  width:35%;
+  justify-content: space-around;
+}
+.nav-links a{
+  color:#ECF0F1  ;
+  text-decoration: none;
+  letter-spacing: 1px;
+  margin: 0px;
+  padding:px;
+  font-size:16px;
+}
+.nav-links li{
+  list-style:none;
+  padding-left:0px;
+}
+  
+  .content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    max-width: "50%";
+  }
+  
+  .article-title {
+    color: #444444;
+  }
+  
+  a.article-title:hover {
+    color: #212529;
+    text-decoration: none;
+  }
+  
+  .article-content {
+    white-space: pre-line;
+  }
+  
+  .article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+  }
+  
+  .article-metadata {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3
+  }
+  
+  .article-metadata a:hover {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+  }
+  
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+  
+.account-heading {
+  font-size: 2.5rem;
+}
+.blog-content{
+  padding-left:350px;
+  padding-right:400px;
+}
+  

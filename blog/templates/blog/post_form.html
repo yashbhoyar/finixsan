@@ -1,0 +1,43 @@
+{% extends "blog/blogbase.html" %}
+{% block content %}
+
+    
+    {% load crispy_forms_tags %}
+    <div class="content-section">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <legend class="border-bottom mb-4">Post your blog/analysis/strategy....</legend>
+                <div class="form-group">
+                        
+                        {{ form.media }}
+                        
+                       <h6>{{ form.title.label_tag }}</h6> 
+                             {{ form.title }}
+
+                    <small style="color:red">{{form.title.errors|striptags}}</small>
+
+                    <hr></hr>
+
+                    <h6>{{form.content.label_tag}}</h6>
+                            {{form.content}}
+                    <small style="color:red">{{form.content.errors|striptags}}</small>
+                    
+                    <hr></hr>
+                    <h6>{{form.chart.label_tag}}</h6>
+                        {{form.chart}}
+                        <small style="color:red">{{form.chart.errors|striptags}}</small>
+                </div>
+                
+            </div>
+            <div class="form-group">
+                <button class="btn btn-secondary" type="submit">Post</button>
+            </div>
+        </form>
+    </div>
+    
+   
+    {% endblock %}       
+
+        
+  

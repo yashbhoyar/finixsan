@@ -1,0 +1,15 @@
+.container{  
+    
+    background-color:#FDFEFE;
+    height:400px;
+    width:900px;  
+    overflow: hidden;  
+    margin: auto;  
+    
+    padding:100px;  
+    border-radius: 15px ;  
+    background-position:right;
+    
+    
+      
+}  

@@ -1,0 +1,37 @@
+body{
+    margin:0;
+    padding:0;
+    background-image:url("/static/images/stock.jpg");
+    background-size: cover;
+    box-sizing: border-box;
+    
+    }
+
+.container{  
+    
+    background-color:#FDFEFE;
+    height:580px;
+    width:800px;  
+    overflow: hidden;  
+    margin: auto;  
+      
+    padding-left:125px;
+    padding-right: 50px;  
+    padding-top:90px;
+    border-radius: 25px ;  
+    background-position:center;
+    
+    box-sizing:border-box;
+      
+}  
+.line{
+    padding-left:0px;
+    padding-right:118px;
+}
+.title{
+
+    font-family: 'Gill Sans', 'Gill Sans MT',' Calibri', 'Trebuchet MS', sans-serif;
+    position: absolute;
+    padding-left:180px;
+    padding-bottom: 200px;
+}

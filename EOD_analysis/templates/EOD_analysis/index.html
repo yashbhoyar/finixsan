@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EOD_analysis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" type="text/css" href="{% static 'css/EOD_analysis.css' %}">
+</head>
+<body>
+    
+        
+        
+        
+            <table class="table table-dark table-striped">
+                <thead>
+                  <tr style="color:#7B7D7D" >
+                    <th scope="col">Symbol</th>
+                    <th scope="col">Series</th>
+                    <th scope="col">Open</th>
+                    <th scope="col">High</th>
+                    <th scope="col">Low</th>
+                    <th scope="col">LTP</th>
+                    <th scope="col">PreviousPrice</th>
+                    <th scope="col">NetPrice</th>
+                    <th scope="col">TradedQuantity</th>
+                    <th scope="col">TurnoverInLakhs</th>
+                 </tr>
+                </thead>
+                <tbody>
+                    {% for top_gainer in top_gainers %}
+                  <tr style="color:#2ECC71" > 
+                    <td>{{ top_gainer.symbol }}</td>
+                    <td>{{ top_gainer.series }}</td>
+                    <td>{{ top_gainer.openPrice }}</td>
+                    <td>{{ top_gainer.highPrice }}</td>
+                    <td>{{ top_gainer.lowPrice}}</td>
+                    <td>{{ top_gainer.ltp }}</td>
+                    <td>{{ top_gainer.previousPrice }}</td>
+                    <td>{{ top_gainer.netPrice}}</td>
+                    <td>{{ top_gainer.tradedQuantity }}</td>
+                    <td>{{ top_gainer.turnoverInLakhs }}</td>
+                  </tr>
+                    {% endfor %}
+                </tbody>
+              </table>
+            </div>
+              <hr></hr>
+              
+              <table class="table table-dark table-striped">
+                <thead>
+                    <tr style="color:#7B7D7D">
+                        <th scope="col">Symbol</th>
+                        <th scope="col">Series</th>
+                        <th scope="col">Open</th>
+                        <th scope="col">High</th>
+                        <th scope="col">Low</th>
+                        <th scope="col">LTP</th>
+                        <th scope="col">PreviousPrice</th>
+                        <th scope="col">NetPrice</th>
+                        <th scope="col">TradedQuantity</th>
+                        <th scope="col">TurnoverInLakhs</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                        {% for top_loser in top_losers %}
+                            <tr style="color:#E74C3C ">
+                                <td >{{ top_loser.symbol }}</td>
+                                <td>{{ top_loser.series }}</td>
+                                <td>{{ top_loser.openPrice }}</td>
+                                <td>{{ top_loser.highPrice }}</td>
+                                <td>{{ top_loser.lowPrice}}</td>
+                                <td>{{ top_loser.ltp }}</td>
+                                <td>{{ top_loser.previousPrice }}</td>
+                                <td>{{ top_loser.netPrice}}</td>
+                                <td>{{ top_loser.tradedQuantity }}</td>
+                                <td>{{ top_loser.turnoverInLakhs }}</td>
+                            </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            
+            
+        
+</body>
+</html>

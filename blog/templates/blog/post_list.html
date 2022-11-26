@@ -1,0 +1,27 @@
+{% extends "blog/blogbase.html" %}
+{% block content %}
+          {% for post in posts %}
+          <article class="media content-section">
+            {% if post.author.profile_pic.url %}
+              <img class="rounded-circle article-img" src="{{ post.author.profile_pic.url }}">
+            {% else %}
+              <img src="img_avatar.png"  class="rounded-circle article-img">
+           {% endif %}
+            <div class="media-body">
+              <div class="article-metadata">
+                {{ post.author }}:
+                <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
+              </div>
+              <h2><a class="article-title" href="{% url 'blog-detail' post.id %}">{{ post.title }}</a></h2>
+              <hr></hr>
+              {% if post.chart %}
+                  <img width="100%" src="{{post.chart.url}}" class="rounded mx-auto d-block" alt="...">
+                  <hr></hr>
+              {% endif %}  
+                        
+              
+              <p class="article-content">{{ post.content }}</p>
+            </div>
+          </article>
+          {% endfor %}
+{% endblock %}

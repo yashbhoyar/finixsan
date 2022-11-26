@@ -1,0 +1,87 @@
+body{
+    background-color:#AED6F1 ;
+    overflow-x:hidden;
+    overflow-y: hidden;
+}
+
+.leftside{
+    height:100vh;
+    overflow-x:hidden;
+    overflow-y: scroll;
+    
+}
+.rightside{
+    height:100vh;
+    overflow-x:hidden;
+   
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+nav{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height:8vh;
+    background-color:#212529;
+    font-family: 'Titillium Web', sans-serif;
+    border-bottom-color: #0000;
+    border-bottom-width: 5px;
+     
+
+}
+.logo{
+    color:#ECF0F1 ;
+    letter-spacing:1px;
+    font-weight: bold;
+    font-size:20px;
+    padding-right:100px;
+}
+.nav-links{
+    display:flex;
+    width:35%;
+    justify-content: space-around;
+}
+.nav-links a{
+    color:#ECF0F1  ;
+    text-decoration: none;
+    letter-spacing: 1px;
+    margin: 0px;
+    padding:50px;
+    font-size:16px;
+}
+.nav-links li{
+    list-style:none;
+    padding-left:0px;
+}
+
+
+@media screen and (max-width:1024px)
+{
+    b.nav-links{
+        width:60%;
+    }
+}
+@media screen and (max-width:1024px){}
+.tradingview-widget-container{
+    padding-top:10px;
+    margin:5px;
+    border-color: #212529;
+    border-style:solid;
+    border-width:1px;
+    padding-left:0px;
+    padding-right:0px;
+}
+
+.placeicon{
+    
+    font-family: fontawesome;
+    color:black;
+}
+.searchbox{
+    height:40px;
+    
+}

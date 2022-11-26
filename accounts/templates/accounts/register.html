@@ -1,0 +1,98 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" >
+
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <title>Sign Up</title>
+</head>
+<body>
+    <p>  </p>
+      </br>
+    <p>  </p>
+            <div class="bg-img">
+                <div class="container">
+                    <form method="POST">
+                        <h2 class="title">Finixsan Lab</h2>
+                    </br>
+                </br>
+            </br>
+
+                        
+
+                            {% csrf_token %}
+                            {% load crispy_forms_tags %} 
+                            
+                     
+                     
+
+                            <div class="form-row"> 
+                                <div class="form-group col-md-6">
+                                    {{ form.username.label_tag }} </br>{{ form.username }} <br/> <small style="color:red">{{form.username.errors|striptags}}</small>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    {{ form.email.label_tag }} </br>{{form.email}} <br/> <small style="color:red">{{form.email.errors|striptags}}</small>
+                                </div>
+                                
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    {{ form.first_name.label_tag }} </br>{{form.first_name}} <br/><small style="color:red">{{form.first_name.errors|striptags}}</small>
+                                </div>
+                                
+                                <div class="form-group col-md-6">
+                                    {{ form.last_name.label_tag }} </br>{{form.last_name}} <br/> <small style="color:red">{{form.last_name.errors|striptags}}</small>
+                                </div>
+
+                            </div>
+
+                            
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    {{ form.password1.label_tag }} </br>{{form.password1}} <br/> <small style="color:red">{{form.password1.errors|striptags}}</small>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    {{ form.password2.label_tag }} </br>{{form.password2}} <br/> <small style="color:red">{{form.password2.errors|striptags}}</small>
+                                </div>
+                            </div>
+
+                            <button type="submit"  class="btn btn-secondary">Submit</button>
+                            <br> </br>
+                            <div class="line">
+
+                           
+                            <hr > </hr>
+                            </div>
+                            <h5 style="color:#515A5A ">Already have an account ? <a href="{% url 'login' %}"> Log In</a></h5>
+
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <div class="alert alert-{{message.tags}}">
+                                        {{message}}
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                        </form>
+                    </div>
+                    
+                            
+            
+</div>
+</span>
+</body>
+</html>

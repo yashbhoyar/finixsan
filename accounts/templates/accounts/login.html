@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}" >
+
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <title>Sign Up</title>
+</head>
+<body>
+    <p>  </p>
+      </br>
+    <p>  </p>
+            <div class="bg-img">
+                <div class="container">
+                    <form method="POST">
+                        
+                            {% csrf_token %}
+                            {% load crispy_forms_tags %} 
+                            
+                            <div class="title">
+                                <h2> Login</h2>
+                                
+                            </div>
+                            
+                            <hr> </hr>
+                            
+                            <div class="form-row"> 
+                                <div class="form-group col-md-6">
+                                    {{ form.username.label_tag }} </br>{{ form.username }} <br/> <small style="color:red">{{form.username.errors|striptags}}</small>
+                                </div>
+                            </div>
+
+                            <div class="form-row"> 
+                                <div class="form-group col-md-6">
+                                    {{ form.password.label_tag }} </br>{{form.password}} <br/> <small style="color:red">{{form.password.errors|striptags}}</small>
+                                </div>
+                                
+                            </div>
+                        </br>
+                            <button type="submit"  class="btn btn-secondary">Login</button>
+                        <hr> </hr>
+                        <h6 style="color:#515A5A ">Dont have an account yet ?  <a href="{% url 'Register' %}"> Register</a></h6>
+                        
+                        <h6 style="color:#515A5A "> Forget Password ?     </br>      <a href="{% url 'password_reset' %}"> Reset Password</a></h6>
+                        </form>
+                                
+                        <hr> </hr>
+                        {% if messages %}
+                                {% for message in messages %}
+                                    <div class="alert alert-{{message.tags}}">
+                                        {{message}}
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                    </div>
+                    
+                            
+            
+</div>
+</span>
+</body>
+</html>
